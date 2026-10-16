@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Espera: completa tu estudio — [NOMBRE DEL UPSELL]</title>
+<meta name="robots" content="noindex">
+<!-- Upsell 1 (post-compra). PROPUESTO: el competidor no tiene upsell público (approved_url vacío en Kiwify).
+     Precio y contenido = PLACEHOLDER hasta que exista el producto real. -->
+<style>
+  :root{
+    --bg:#ffffff; --fg:#141a1f; --muted:#5b6b78; --line:#e6ebef;
+    --brand:#9a6b1f; --brand-ink:#4a2f0b; --accent:#c8902e; --card:#fbf7ef;
+    --maxw:720px; --radius:16px; --shadow:0 6px 24px rgba(60,40,10,.10);
+  }
+  :root:not([data-theme="light"]){} /* brand palette is light by design for conversion */
+  *{box-sizing:border-box} html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;font-size:17px}
+  img{max-width:100%;height:auto;display:block;border-radius:12px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+  .section{padding:40px 0}
+  h1,h2,h3{line-height:1.2;margin:0 0 .5em;font-weight:800;letter-spacing:-.02em}
+  h1{font-size:clamp(28px,7vw,44px)} h2{font-size:clamp(23px,5.2vw,34px)}
+  h3{font-size:clamp(19px,4vw,22px)}
+  p{margin:0 0 1em} .muted{color:var(--muted)}
+  .center{text-align:center}
+  .eyebrow{display:inline-block;font-weight:700;color:var(--brand-ink);
+    background:var(--card);border:1px solid var(--line);padding:6px 14px;border-radius:999px;
+    font-size:14px;margin-bottom:14px}
+  /* CTA */
+  .cta{display:block;width:100%;max-width:520px;margin:18px auto;padding:18px 22px;
+    background:var(--brand);color:#fff;border:0;border-radius:14px;text-align:center;
+    font-size:clamp(17px,4.4vw,20px);font-weight:800;text-decoration:none;cursor:pointer;
+    box-shadow:var(--shadow);transition:transform .08s ease,filter .2s}
+  .cta:hover{filter:brightness(1.05)} .cta:active{transform:translateY(1px)}
+  .cta small{display:block;font-weight:600;opacity:.9;font-size:13px;margin-top:4px}
+  .trust{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:center;
+    color:var(--muted);font-size:14px;font-weight:600;margin:8px 0}
+  .trust span{white-space:nowrap}
+  /* sticky announcement bar */
+  .bar{position:sticky;top:0;z-index:40;background:var(--brand-ink);color:#fff;
+    text-align:center;font-weight:700;font-size:14px;padding:10px 14px}
+  .bar [data-countdown]{font-variant-numeric:tabular-nums;background:rgba(255,255,255,.15);
+    padding:2px 8px;border-radius:8px;margin-left:6px}
+  /* cards / grids */
+  .grid{display:grid;gap:16px}
+  @media(min-width:640px){.grid.cols-2{grid-template-columns:1fr 1fr}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .step{counter-increment:step} .step .n{display:inline-grid;place-items:center;width:34px;height:34px;
+    border-radius:50%;background:var(--brand);color:#fff;font-weight:800;margin-bottom:10px}
+  ul.checks{list-style:none;padding:0;margin:0} ul.checks li{padding:8px 0 8px 30px;position:relative}
+  ul.checks li::before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:800}
+  ul.pains li::before{content:"✕";color:#c2443a}
+  /* two columns who-for */
+  .cols-for{display:grid;gap:16px}@media(min-width:640px){.cols-for{grid-template-columns:1fr 1fr}}
+  /* testimonials */
+  .tcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+  .tcard .who{display:flex;align-items:center;gap:12px;margin-top:12px}
+  .tcard .who img{width:46px;height:46px;border-radius:50%}
+  .stars{color:#ffb300;letter-spacing:2px;font-size:18px}
+  .scroller{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
+    padding-bottom:8px;-webkit-overflow-scrolling:touch}
+  .scroller>*{flex:0 0 86%;scroll-snap-align:center}@media(min-width:640px){.scroller>*{flex-basis:48%}}
+  /* offer box */
+  .offer{background:linear-gradient(180deg,#fff, var(--card));border:2px solid var(--brand);
+    border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+  .price{font-size:clamp(40px,11vw,60px);font-weight:900;color:var(--brand-ink);line-height:1}
+  .price .old{display:block;font-size:20px;color:var(--muted);text-decoration:line-through;font-weight:700}
+  .stack{list-style:none;padding:0;margin:16px 0}
+  .stack li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}
+  .stack .v{color:var(--muted);white-space:nowrap}
+  /* guarantee */
+  .guarantee{display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:center;text-align:center}
+  @media(min-width:640px){.guarantee{text-align:left;flex-wrap:nowrap}}
+  .guarantee img{width:120px}
+  /* scarcity bar */
+  .scarcity{background:#fff6ec;border:1px solid #ffd9b0;border-radius:14px;padding:14px 16px;text-align:center;font-weight:700}
+  /* faq */
+  details{border:1px solid var(--line);border-radius:12px;margin:10px 0;background:#fff}
+  details summary{cursor:pointer;padding:16px;font-weight:700;list-style:none;position:relative}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+";position:absolute;right:16px;color:var(--brand);font-weight:800}
+  details[open] summary::after{content:"–"}
+  details .a{padding:0 16px 16px;color:var(--muted)}
+  /* exit popup + live toast */
+  .popup{position:fixed;inset:0;z-index:60;background:rgba(29,21,11,.6);
+    display:flex;align-items:center;justify-content:center;padding:18px}
+  .popup[hidden]{display:none} .popup .box{background:#fff;border-radius:18px;max-width:420px;padding:26px;text-align:center}
+  .toast{position:fixed;left:16px;bottom:16px;z-index:55;background:#fff;border:1px solid var(--line);
+    box-shadow:var(--shadow);border-radius:12px;padding:12px 14px;font-size:14px;max-width:300px}
+  .toast[hidden]{display:none}
+  footer{background:#1d150b;color:#cbb994;font-size:13px;padding:30px 0}
+  footer a{color:#efe2c4}
+  .legal{font-size:12px;color:#a8977a;margin-top:14px}
+  .ph{display:grid;place-items:center;text-align:center;background:repeating-linear-gradient(45deg,#f6f1e6,#f6f1e6 12px,#efe7d6 12px,#efe7d6 24px);
+    border:2px dashed #b59a6a;border-radius:14px;color:#5a4320;font-weight:700;font-size:14px;padding:18px;min-height:220px;margin:16px 0}
+  .ph.sm{min-height:120px} .ph small{display:block;font-weight:600;opacity:.8;margin-top:4px}
+  .tag{display:inline-block;background:#fff3cd;color:#7a5b00;border:1px solid #f1d27a;border-radius:6px;font-size:12px;font-weight:800;padding:1px 6px}
+  .ex{border-style:dashed}
+  .bumpbox{border:2px dashed var(--accent);background:#fffaf0;border-radius:14px;padding:16px}
+</style>
+</head>
+<body>
+
+<div class="bar">✅ Tu pedido está confirmado · un paso más antes de tu acceso</div>
+
+<header class="section center">
+  <div class="wrap">
+    <span class="eyebrow">Oferta única para nuevos alumnos</span>
+    <h1>Ya tienes el mapa. ¿Quieres recorrer cada libro con un guía al lado?</h1>
+    <p class="muted">[NOMBRE DEL UPSELL]: estudio guiado capítulo por capítulo de los libros que más cuesta entender, con preguntas para grupo y hojas de trabajo imprimibles.</p>
+    <div class="ph" role="img" aria-label="IMG-17">🖼️ PLACEHOLDER DE IMAGEN · IMG-17<small>Mockup del upsell: carpeta/cuaderno de estudio "capítulo por capítulo" con hojas de trabajo impresas, lápiz y Biblia abierta (mismo estilo pergamino/dorado)</small></div>
+  </div>
+</header>
+
+<section class="section" style="background:var(--card)">
+  <div class="wrap">
+    <h2 class="center">Lo que añades a tu pedido</h2>
+    <ul class="checks">
+      <li>Estudio capítulo a capítulo de [LIBROS REALES — p. ej. Génesis, Éxodo, Daniel, Romanos y Apocalipsis]. <span class="tag">PLACEHOLDER</span></li>
+      <li>Hojas de trabajo imprimibles para estudiar solo/a o en grupo.</li>
+      <li>Preguntas de discusión listas para tu célula o escuela dominical.</li>
+      <li>[Nº REAL] mapas y cuadros (tabernáculo, viajes de Pablo, reyes de Israel…). <span class="tag">PLACEHOLDER</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="offer center">
+      <h2>Solo en esta página</h2>
+      <div class="price">US$ [17]</div>
+      <p class="muted">Pago único · se añade a tu compra con un clic <span class="tag">PRECIO PROPUESTO</span></p>
+      <a class="cta" data-cta="accept" href="#UPSELL_ACCEPT_URL">Sí, añadir el estudio guiado<small>Se suma a mi pedido sin volver a escribir mis datos</small></a>
+      <p class="center"><a data-cta="decline" href="downsell-1.html" style="color:var(--muted)">No, gracias — me quedo solo con la guía</a></p>
+      <div class="trust"><span>🛡️ Misma garantía de [N] días</span><span>🔒 Pago seguro</span></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <p>© <span id="y"></span> [MARCA — p. ej. Emma Martin] · Soporte: [EMAIL DE SOPORTE]</p>
+  <p class="legal">Este sitio no forma parte de Facebook ni de Meta Platforms, Inc., ni está respaldado por ellos.</p>
+</div></footer>
+
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<script src="./funnel.config.js" defer></script>
+<script src="assets/kit/funnel.js" defer></script>
+</body>
+</html>

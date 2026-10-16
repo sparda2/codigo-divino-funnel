@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>[NOMBRE DEL PRODUCTO] — Entiende la Biblia de Génesis a Apocalipsis, paso a paso</title>
+<meta name="description" content="Guía visual de estudio bíblico en español: un esquema claro por cada libro, un plan de lectura y un devocional diario para entender la Biblia con orden y aplicarla a tu vida.">
+<!--
+  Constructor de Funnels Ganadores · proyecto codigo-divino · 2026-10-16
+  Modelado de la ESTRUCTURA del funnel "Código Divino" (lumevie.store + checkout Kiwify).
+  El texto es original; no se copió marca, copy ni imágenes del competidor.
+  Todo lo marcado PLACEHOLDER / EJEMPLO debe reemplazarse con datos REALES antes de meter tráfico.
+-->
+<style>
+  :root{
+    --bg:#ffffff; --fg:#141a1f; --muted:#5b6b78; --line:#e6ebef;
+    --brand:#9a6b1f; --brand-ink:#4a2f0b; --accent:#c8902e; --card:#fbf7ef;
+    --maxw:720px; --radius:16px; --shadow:0 6px 24px rgba(60,40,10,.10);
+  }
+  :root:not([data-theme="light"]){} /* brand palette is light by design for conversion */
+  *{box-sizing:border-box} html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;font-size:17px}
+  img{max-width:100%;height:auto;display:block;border-radius:12px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+  .section{padding:40px 0}
+  h1,h2,h3{line-height:1.2;margin:0 0 .5em;font-weight:800;letter-spacing:-.02em}
+  h1{font-size:clamp(28px,7vw,44px)} h2{font-size:clamp(23px,5.2vw,34px)}
+  h3{font-size:clamp(19px,4vw,22px)}
+  p{margin:0 0 1em} .muted{color:var(--muted)}
+  .center{text-align:center}
+  .eyebrow{display:inline-block;font-weight:700;color:var(--brand-ink);
+    background:var(--card);border:1px solid var(--line);padding:6px 14px;border-radius:999px;
+    font-size:14px;margin-bottom:14px}
+  /* CTA */
+  .cta{display:block;width:100%;max-width:520px;margin:18px auto;padding:18px 22px;
+    background:var(--brand);color:#fff;border:0;border-radius:14px;text-align:center;
+    font-size:clamp(17px,4.4vw,20px);font-weight:800;text-decoration:none;cursor:pointer;
+    box-shadow:var(--shadow);transition:transform .08s ease,filter .2s}
+  .cta:hover{filter:brightness(1.05)} .cta:active{transform:translateY(1px)}
+  .cta small{display:block;font-weight:600;opacity:.9;font-size:13px;margin-top:4px}
+  .trust{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:center;
+    color:var(--muted);font-size:14px;font-weight:600;margin:8px 0}
+  .trust span{white-space:nowrap}
+  /* sticky announcement bar */
+  .bar{position:sticky;top:0;z-index:40;background:var(--brand-ink);color:#fff;
+    text-align:center;font-weight:700;font-size:14px;padding:10px 14px}
+  .bar [data-countdown]{font-variant-numeric:tabular-nums;background:rgba(255,255,255,.15);
+    padding:2px 8px;border-radius:8px;margin-left:6px}
+  /* cards / grids */
+  .grid{display:grid;gap:16px}
+  @media(min-width:640px){.grid.cols-2{grid-template-columns:1fr 1fr}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .step{counter-increment:step} .step .n{display:inline-grid;place-items:center;width:34px;height:34px;
+    border-radius:50%;background:var(--brand);color:#fff;font-weight:800;margin-bottom:10px}
+  ul.checks{list-style:none;padding:0;margin:0} ul.checks li{padding:8px 0 8px 30px;position:relative}
+  ul.checks li::before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:800}
+  ul.pains li::before{content:"✕";color:#c2443a}
+  /* two columns who-for */
+  .cols-for{display:grid;gap:16px}@media(min-width:640px){.cols-for{grid-template-columns:1fr 1fr}}
+  /* testimonials */
+  .tcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+  .tcard .who{display:flex;align-items:center;gap:12px;margin-top:12px}
+  .tcard .who img{width:46px;height:46px;border-radius:50%}
+  .stars{color:#ffb300;letter-spacing:2px;font-size:18px}
+  .scroller{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
+    padding-bottom:8px;-webkit-overflow-scrolling:touch}
+  .scroller>*{flex:0 0 86%;scroll-snap-align:center}@media(min-width:640px){.scroller>*{flex-basis:48%}}
+  /* offer box */
+  .offer{background:linear-gradient(180deg,#fff, var(--card));border:2px solid var(--brand);
+    border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+  .price{font-size:clamp(40px,11vw,60px);font-weight:900;color:var(--brand-ink);line-height:1}
+  .price .old{display:block;font-size:20px;color:var(--muted);text-decoration:line-through;font-weight:700}
+  .stack{list-style:none;padding:0;margin:16px 0}
+  .stack li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}
+  .stack .v{color:var(--muted);white-space:nowrap}
+  /* guarantee */
+  .guarantee{display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:center;text-align:center}
+  @media(min-width:640px){.guarantee{text-align:left;flex-wrap:nowrap}}
+  .guarantee img{width:120px}
+  /* scarcity bar */
+  .scarcity{background:#fff6ec;border:1px solid #ffd9b0;border-radius:14px;padding:14px 16px;text-align:center;font-weight:700}
+  /* faq */
+  details{border:1px solid var(--line);border-radius:12px;margin:10px 0;background:#fff}
+  details summary{cursor:pointer;padding:16px;font-weight:700;list-style:none;position:relative}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+";position:absolute;right:16px;color:var(--brand);font-weight:800}
+  details[open] summary::after{content:"–"}
+  details .a{padding:0 16px 16px;color:var(--muted)}
+  /* exit popup + live toast */
+  .popup{position:fixed;inset:0;z-index:60;background:rgba(29,21,11,.6);
+    display:flex;align-items:center;justify-content:center;padding:18px}
+  .popup[hidden]{display:none} .popup .box{background:#fff;border-radius:18px;max-width:420px;padding:26px;text-align:center}
+  .toast{position:fixed;left:16px;bottom:16px;z-index:55;background:#fff;border:1px solid var(--line);
+    box-shadow:var(--shadow);border-radius:12px;padding:12px 14px;font-size:14px;max-width:300px}
+  .toast[hidden]{display:none}
+  footer{background:#1d150b;color:#cbb994;font-size:13px;padding:30px 0}
+  footer a{color:#efe2c4}
+  .legal{font-size:12px;color:#a8977a;margin-top:14px}
+  .ph{display:grid;place-items:center;text-align:center;background:repeating-linear-gradient(45deg,#f6f1e6,#f6f1e6 12px,#efe7d6 12px,#efe7d6 24px);
+    border:2px dashed #b59a6a;border-radius:14px;color:#5a4320;font-weight:700;font-size:14px;padding:18px;min-height:220px;margin:16px 0}
+  .ph.sm{min-height:120px} .ph small{display:block;font-weight:600;opacity:.8;margin-top:4px}
+  .tag{display:inline-block;background:#fff3cd;color:#7a5b00;border:1px solid #f1d27a;border-radius:6px;font-size:12px;font-weight:800;padding:1px 6px}
+  .ex{border-style:dashed}
+  .bumpbox{border:2px dashed var(--accent);background:#fffaf0;border-radius:14px;padding:16px}
+</style>
+</head>
+<body>
+
+<!-- 1. BARRA (sin countdown: no hay deadline real confirmado) -->
+<div class="bar" data-bar>📖 Guía visual de estudio bíblico · acceso inmediato <span data-countdown hidden></span></div>
+
+<!-- 2. HERO — message match con el anuncio ganador: "lleva tu estudio bíblico a otro nivel" -->
+<header class="section center">
+  <div class="wrap">
+    <span class="eyebrow">Para cristianos que quieren entender lo que leen</span>
+    <h1>Lleva tu estudio bíblico a otro nivel: entiende la Biblia de Génesis a Apocalipsis, un libro a la vez</h1>
+    <p class="muted">Un esquema visual por cada libro, un plan de lectura que sí puedes seguir y un devocional diario para aplicar la Palabra hoy mismo, aunque nunca hayas hecho un estudio bíblico.</p>
+    <div class="ph" role="img" aria-label="IMG-01 Mockup hero">🖼️ PLACEHOLDER DE IMAGEN · IMG-01<small>Mockup del producto: portada del eBook en tablet + celular + páginas abiertas mostrando un esquema visual (tonos pergamino, dorado y blanco, luz cálida, Biblia abierta al lado)</small></div>
+    <a class="cta" data-cta="checkout" href="#CHECKOUT_URL">Quiero entender la Biblia
+      <small>Acceso inmediato · pago único</small></a>
+    <div class="trust"><span>✅ Acceso inmediato</span><span>🔒 Pago seguro</span><span>🛡️ [GARANTÍA REAL — PLACEHOLDER, p. ej. 7 días]</span></div>
+  </div>
+</header>
+
+<!-- 3. MECANISMO — el producto como sistema de 3 pasos -->
+<section class="section">
+  <div class="wrap center">
+    <h2>El método "Ver · Entender · Vivir"</h2>
+    <p class="muted">No es otro PDF para guardar. Es un camino ordenado para recorrer toda la Biblia sin perderte.</p>
+    <div class="grid cols-3" style="counter-reset:step;margin-top:20px">
+      <div class="card step"><span class="n">1</span><div class="ph sm" role="img" aria-label="IMG-02">🖼️ PLACEHOLDER · IMG-02<small>Página de esquema visual de un libro (línea de tiempo + personajes + idea central)</small></div><h3>Ver</h3><p class="muted">Cada libro en una sola página visual: de qué trata, quién lo escribió, a quién, cuándo y su idea central.</p></div>
+      <div class="card step"><span class="n">2</span><div class="ph sm" role="img" aria-label="IMG-03">🖼️ PLACEHOLDER · IMG-03<small>Página de explicación por secciones con versículos clave resaltados</small></div><h3>Entender</h3><p class="muted">Explicaciones sencillas por secciones, con el contexto que hace que todo cobre sentido y cómo conecta el Antiguo con el Nuevo Testamento.</p></div>
+      <div class="card step"><span class="n">3</span><div class="ph sm" role="img" aria-label="IMG-04">🖼️ PLACEHOLDER · IMG-04<small>Página de devocional: versículo, reflexión breve, pregunta y oración</small></div><h3>Vivir</h3><p class="muted">Un devocional corto para cada día: versículo, reflexión, una pregunta para tu vida y una oración.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. AGITACIÓN DEL PROBLEMA -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="center">¿Te pasa algo de esto?</h2>
+    <ul class="checks pains">
+      <li>Abres la Biblia con ganas, pero a los pocos capítulos te pierdes entre nombres, fechas y genealogías.</li>
+      <li>Empiezas planes de lectura que abandonas en Levítico… otra vez.</li>
+      <li>Escuchas una prédica y la entiendes, pero solo/a no sabes cómo estudiar.</li>
+      <li>Lees un versículo y no sabes cómo encaja en la historia completa ni qué hacer con él el lunes.</li>
+    </ul>
+    <p class="center" style="font-weight:700;margin-top:10px">No te falta fe ni disciplina. Te falta un mapa.</p>
+  </div>
+</section>
+
+<!-- 5. RESULTADOS -->
+<section class="section" style="background:var(--card)">
+  <div class="wrap">
+    <h2 class="center">Con un mapa claro, todo cambia</h2>
+    <ul class="checks">
+      <li>Sabes de qué trata cada libro y dónde estás en la gran historia de la Biblia.</li>
+      <li>Lees con propósito: entiendes el contexto antes de leer el capítulo.</li>
+      <li>Ves cómo cada parte apunta a Jesús, del Génesis al Apocalipsis.</li>
+      <li>Tienes un rato diario con Dios que sí puedes sostener (10–15 minutos).</li>
+      <li>Puedes explicar lo que aprendes a tus hijos, a tu célula o a tu grupo de estudio.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6. ENTREGABLES (contenido y cantidades = PLACEHOLDER hasta tener el archivo real) -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="center">Todo lo que recibes</h2>
+    <div class="grid cols-2" style="margin-top:20px">
+      <div class="card"><div class="ph sm" role="img" aria-label="IMG-05">🖼️ PLACEHOLDER · IMG-05<small>Miniatura: abanico de esquemas visuales por libro</small></div><h3>Esquemas visuales de los 66 libros</h3><p class="muted">Una página clara por libro con su idea central, estructura, personajes y versículos clave. <span class="tag">[Nº REAL de páginas]</span></p></div>
+      <div class="card"><div class="ph sm" role="img" aria-label="IMG-06">🖼️ PLACEHOLDER · IMG-06<small>Miniatura: línea de tiempo de la Biblia de Génesis a Apocalipsis</small></div><h3>La gran historia en una línea de tiempo</h3><p class="muted">Creación, caída, promesa, Israel, Jesús, la Iglesia y la restauración: el hilo que une los dos Testamentos.</p></div>
+      <div class="card"><div class="ph sm" role="img" aria-label="IMG-07">🖼️ PLACEHOLDER · IMG-07<small>Miniatura: calendario de plan de lectura (casillas para marcar)</small></div><h3>Plan de lectura guiado</h3><p class="muted">Un plan por etapas con casillas para marcar tu avance. <span class="tag">[DURACIÓN REAL — p. ej. 30 días]</span></p></div>
+      <div class="card"><div class="ph sm" role="img" aria-label="IMG-08">🖼️ PLACEHOLDER · IMG-08<small>Miniatura: página de devocional diario</small></div><h3>Devocionales diarios</h3><p class="muted">Versículo, reflexión breve, pregunta de aplicación y oración. <span class="tag">[Nº REAL de devocionales]</span></p></div>
+    </div>
+
+    <h3 class="center" style="margin-top:30px">🎁 Bonos incluidos <span class="tag">PLACEHOLDER — confirma qué bonos existen de verdad</span></h3>
+    <div class="grid cols-3" style="margin-top:12px">
+      <div class="card"><div class="ph sm" role="img" aria-label="IMG-09">🖼️ PLACEHOLDER · IMG-09<small>Portada bono 1</small></div><h3>Bono 1: [Guía de oración por temas]</h3><p class="muted">[Descripción real del bono]</p></div>
+      <div class="card"><div class="ph sm" role="img" aria-label="IMG-10">🖼️ PLACEHOLDER · IMG-10<small>Portada bono 2</small></div><h3>Bono 2: [Personajes bíblicos en fichas]</h3><p class="muted">[Descripción real del bono]</p></div>
+      <div class="card"><div class="ph sm" role="img" aria-label="IMG-11">🖼️ PLACEHOLDER · IMG-11<small>Portada bono 3</small></div><h3>Bono 3: [Cómo estudiar un pasaje en 5 pasos]</h3><p class="muted">[Descripción real del bono]</p></div>
+    </div>
+    <a class="cta" data-cta="checkout" href="#CHECKOUT_URL">Sí, quiero mi guía y los bonos</a>
+  </div>
+</section>
+
+<!-- 7. PARA QUIÉN ES / NO ES -->
+<section class="section" style="background:var(--card)">
+  <div class="wrap cols-for">
+    <div class="card"><h3>✅ Es para ti si…</h3><ul class="checks">
+      <li>Eres nuevo/a en la fe o quieres retomar la lectura con orden.</li>
+      <li>Llevas años en la iglesia pero nunca leíste la Biblia completa entendiéndola.</li>
+      <li>Enseñas en escuela dominical, célula o en casa y necesitas material claro.</li></ul></div>
+    <div class="card"><h3>🚫 No es para ti si…</h3><ul class="checks pains">
+      <li>Buscas un tratado académico de teología o idiomas originales.</li>
+      <li>No piensas abrir la Biblia: la guía acompaña tu lectura, no la reemplaza.</li></ul></div>
+  </div>
+</section>
+
+<!-- 8. PRUEBA · CONTENIDO DE EJEMPLO — reemplaza con testimonios REALES (con permiso) o borra la sección.
+     No usar fotos de stock como "clientes". No inventar conteos ("+4.000 cristianos") ni ratings. -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="center">Lo que dicen quienes ya la usan</h2>
+    <p class="center"><span class="tag">EJEMPLO — reemplaza con tu prueba real</span></p>
+    <p class="center stars">★★★★★ <span class="muted" style="font-size:15px">[RATING REAL y nº de reseñas — PLACEHOLDER]</span></p>
+    <div class="scroller" style="margin-top:16px">
+      <div class="tcard ex"><p>"[TESTIMONIO REAL 1 — EJEMPLO: qué cambió en su lectura]"</p>
+        <div class="who"><div class="ph sm" style="width:46px;height:46px;min-height:0;padding:0;margin:0;border-radius:50%" role="img" aria-label="IMG-12">IMG-12</div><strong>[Nombre, ciudad — con permiso]</strong></div></div>
+      <div class="tcard ex"><p>"[TESTIMONIO REAL 2 — EJEMPLO: captura de WhatsApp / comentario]"</p>
+        <div class="who"><div class="ph sm" style="width:46px;height:46px;min-height:0;padding:0;margin:0;border-radius:50%" role="img" aria-label="IMG-13">IMG-13</div><strong>[Nombre, ciudad]</strong></div></div>
+      <div class="tcard ex"><p>"[TESTIMONIO REAL 3 — EJEMPLO: líder de célula / maestra de escuela dominical]"</p>
+        <div class="who"><div class="ph sm" style="width:46px;height:46px;min-height:0;padding:0;margin:0;border-radius:50%" role="img" aria-label="IMG-14">IMG-14</div><strong>[Nombre, ciudad]</strong></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. STACK DE OFERTA + PRECIO (precios = PROPUESTOS, ver brief) -->
+<section class="section" style="background:var(--card)">
+  <div class="wrap">
+    <div class="offer center">
+      <h2>Llévate hoy [NOMBRE DEL PRODUCTO]</h2>
+      <div class="ph" role="img" aria-label="IMG-15">🖼️ PLACEHOLDER DE IMAGEN · IMG-15<small>Mockup del paquete completo: eBook principal + 3 bonos en fila (mismo estilo que IMG-01)</small></div>
+      <ul class="stack">
+        <li><span>Esquemas visuales de los 66 libros</span><span class="v">✔</span></li>
+        <li><span>Línea de tiempo de la Biblia</span><span class="v">✔</span></li>
+        <li><span>Plan de lectura guiado</span><span class="v">✔</span></li>
+        <li><span>Devocionales diarios</span><span class="v">✔</span></li>
+        <li><span>3 bonos <span class="tag">PLACEHOLDER</span></span><span class="v">✔</span></li>
+      </ul>
+      <!-- Sin "precio anterior" tachado ni "valor $49": solo se muestra si hubo un precio real anterior. -->
+      <div class="price">US$ [7,90]</div>
+      <p class="muted">Pago único · acceso de por vida · en tu moneda local <span class="tag">PRECIO PROPUESTO</span></p>
+      <a class="cta" data-cta="checkout" href="#CHECKOUT_URL">Quiero mi acceso ahora</a>
+      <div class="trust"><span>✅ Acceso inmediato por email</span><span>🔒 Pago seguro</span><span>📱 Celular, tablet o PC</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. GARANTÍA -->
+<section class="section">
+  <div class="wrap guarantee">
+    <div class="ph sm" style="width:120px;min-width:120px" role="img" aria-label="IMG-16">IMG-16<small>Sello de garantía</small></div>
+    <div><h2>Garantía de [N] días <span class="tag">PLACEHOLDER</span></h2><p class="muted">Recórrela con calma. Si en [N] días sientes que no te ayuda a entender mejor la Biblia, pide el reembolso desde la plataforma de pago y te devolvemos el 100%. [Ajusta este texto a tu política real de reembolso.]</p></div>
+  </div>
+</section>
+
+<!-- 11. URGENCIA HONESTA (sin contadores, sin "últimos cupos": es un producto digital ilimitado) -->
+<section class="section"><div class="wrap">
+  <div class="scarcity">Precio de lanzamiento. Subirá cuando terminemos la fase de lanzamiento. <span class="tag">PLACEHOLDER — solo si es verdad</span></div>
+</div></section>
+
+<!-- 12. FAQ -->
+<section class="section" style="background:var(--card)"><div class="wrap" data-faq>
+  <h2 class="center">Preguntas frecuentes</h2>
+  <details><summary>¿Cómo recibo la guía?</summary><div class="a">Al confirmarse el pago recibes un email con el acceso. Puedes leerla en el celular, tablet o computadora, y también imprimirla. [Confirma el formato real: PDF descargable o área de miembros.]</div></details>
+  <details><summary>¿Sirve si nunca estudié la Biblia?</summary><div class="a">Sí. Está escrita en lenguaje sencillo y empieza por lo básico: de qué trata cada libro y cómo encaja en la historia completa.</div></details>
+  <details><summary>¿Qué versión de la Biblia necesito?</summary><div class="a">Cualquiera en español. [Indica qué versión citas en la guía, p. ej. RVR1960 o NVI.]</div></details>
+  <details><summary>¿Es de alguna denominación en particular?</summary><div class="a">[Respuesta real: enfoque interdenominacional / evangélico / católico — PLACEHOLDER.]</div></details>
+  <details><summary>¿Puedo usarla para enseñar en mi iglesia o célula?</summary><div class="a">Sí, para tu enseñanza personal y de grupo. [Aclara si se permite imprimir copias para el grupo.]</div></details>
+  <details><summary>¿Puedo pagar en mi moneda?</summary><div class="a">Sí, la plataforma de pago convierte automáticamente a tu moneda local. [Confirma métodos de pago reales.]</div></details>
+  <details><summary>¿Y si no es lo que esperaba?</summary><div class="a">Tienes [N] días de garantía: pides el reembolso y se te devuelve el 100%. <span class="tag">PLACEHOLDER</span></div></details>
+</div></section>
+
+<!-- 13. CTA FINAL -->
+<section class="section center"><div class="wrap">
+  <h2>Hoy puede ser el día en que la Biblia por fin tenga sentido para ti</h2>
+  <div class="price">US$ [7,90]</div>
+  <a class="cta" data-cta="checkout" href="#CHECKOUT_URL">Empezar mi estudio ahora<small>Acceso inmediato · pago único</small></a>
+</div></section>
+
+<!-- 14. FOOTER + LEGAL -->
+<footer><div class="wrap">
+  <p>© <span id="y"></span> [MARCA — p. ej. Emma Martin] · <a href="#PRIVACY_URL">Privacidad</a> · <a href="#TERMS_URL">Términos</a> · <a href="#REFUND_URL">Reembolsos</a> · Soporte: [EMAIL DE SOPORTE]</p>
+  <p class="legal">Material de estudio bíblico de carácter devocional y educativo; no sustituye el acompañamiento de tu iglesia. Este sitio no forma parte de Facebook ni de Meta Platforms, Inc., ni está respaldado por ellos.</p>
+</div></footer>
+
+<!-- 15. POPUP DE SALIDA (una vez por visitante, oferta honesta) -->
+<div class="popup" data-exit hidden><div class="box">
+  <h3>Antes de irte…</h3>
+  <p class="muted">Tu mapa para entender la Biblia de principio a fin, por US$ [7,90] y con [N] días de garantía.</p>
+  <a class="cta" data-cta="checkout" href="#CHECKOUT_URL">Sí, lo quiero</a>
+  <button class="cta" style="background:#eee;color:#333;box-shadow:none" data-exit-close>No, gracias</button>
+</div></div>
+
+<!-- TOAST EN VIVO · oculto (proof.live vacío: no hay pedidos reales) -->
+<div class="toast" data-proof-live hidden></div>
+
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<script src="./funnel.config.js" defer></script>
+<script src="assets/kit/funnel.js" defer></script>
+</body>
+</html>
